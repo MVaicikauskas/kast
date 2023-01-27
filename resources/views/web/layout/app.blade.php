@@ -367,7 +367,7 @@
         });
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148072018-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1SCJ0PXHY"></script>
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
@@ -392,7 +392,7 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-        gtag('config', 'UA-148072018-1');
+        gtag('config', 'G-C1SCJ0PXHY');
     </script>
     <script>
         !function (f, b, e, v, n, t, s) {
