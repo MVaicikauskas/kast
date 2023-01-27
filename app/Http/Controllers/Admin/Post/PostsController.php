@@ -57,12 +57,14 @@ class PostsController extends AdminController
      */
     public function store(Request $request)
     {
+        // need to update!!!
         $this->validate($request, [
             'title' => 'required|min:3|max:191',
             'excerpt' => 'required|min:3|max:191',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'description' => 'required',
-            'category_id' => 'required'
+            'category_id' => 'required',
+            'slug' => 'exists:posts'
         ]);
 
         $post = new Post;
