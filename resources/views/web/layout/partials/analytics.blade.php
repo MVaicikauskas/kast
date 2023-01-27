@@ -1,5 +1,5 @@
 @if(!auth()->check())
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148072018-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1SCJ0PXHY"></script>
     <script>
         //gtag
         (function (w, d, s, l, i) {
@@ -20,7 +20,7 @@
         }
 
         gtag('js', new Date());
-        gtag('config', 'UA-148072018-1');
+        gtag('config', 'G-C1SCJ0PXHY');
 
 
         //fb
