@@ -1,0 +1,286 @@
+.filter-bar {
+	width: 100%;
+  height: auto;
+  margin: 0 0 40px 0;
+  padding: 0;
+  
+  position: sticky;
+  z-index: 125;
+  top: 80px;
+
+	display: flex;
+	align-items: center;
+  justify-content: flex-start;
+  
+  flex-flow: column-reverse;
+  flex-wrap: wrap;
+
+  background-color: $darken-green;
+
+  @include breakpoint(medium) {
+    height: 40px;
+    padding: 0 30px;
+    flex-flow: row;
+    flex-wrap: nowrap;
+  }
+
+  @include breakpoint(large) {
+    padding: 0 80px;
+  }
+
+  @include breakpoint(xlarge) {
+    padding: 0 90px;
+  }
+}
+
+.filter-bar {
+  font-size: 13px;
+
+	.filter {
+    width: 100%;
+    height: 40px;
+
+    display: inline-block;
+
+    flex: 1 1 0;
+    background-color: $darken-green;
+
+    color: $white;
+    text-transform: uppercase;
+    
+    transition: .35s ease-in-out;
+
+    padding: 10px;
+
+    ::placeholder {
+      font-size: 13px;
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 700;
+    }
+
+    &:last-child {
+      input {
+        color: $white;
+        font-size: 12px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      #eventName {
+        padding: 5px;
+        cursor: pointer;
+      }
+    }
+
+		&:not(:last-child):hover {
+			.filter-dropdown {
+				display: block;
+      }
+
+      background-color: darken($darken-green, 5%);
+		}
+
+	}
+
+	.filter-select {
+		position: relative;
+		display: inline-block;
+    cursor: pointer;
+
+    &:last-child{
+      background-color: lighten($darken-green, 10%);
+      border-right: 5px solid $light-green;
+
+      input{
+        
+        &:focus{
+          &::placeholder{
+            color: $darken-green;
+          }
+          
+        }
+      }
+
+    }
+
+    
+    // &:nth-child(3){
+    //   .category-filter{
+
+    //     &:focus{
+    //       color: $light-green;
+    //       font-size: 15px;
+    //       transition: .5s ease-in-out;
+    //     }
+    //   }
+    // } 
+    
+
+		.filter-button {
+			width: 175px;
+			padding: 15px 25px;
+			border: 0;
+			// border-bottom: 1px solid $dark-green;
+			// border-radius: 25px;
+			outline: 0;
+			background-color: transparent;
+			color: $dark-green;
+
+			font-weight: 500;
+			letter-spacing: 0.5px;
+
+			position: relative;
+
+			transition: $text-anim;
+
+			&:after {
+				content: '';
+				position: absolute;
+
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: $dark-green;
+
+				transition: $text-anim;
+			}
+
+			&:hover {
+				color: $red;
+
+				&:after{
+					background-color: $red;
+				}
+			}
+
+			&.selected {
+				color: $red;
+
+				&:after {
+					background-color: $red;
+				}
+			}
+		}
+	}
+
+	.filter-dropdown {
+		display: none;
+		width: 100%;
+		padding: 0;
+		position: absolute;
+		background-color: darken($bg, 0%);
+		max-height: 300px;
+		overflow-y: auto;
+
+    top: 40px;
+    left: 0;
+    right: 0;
+
+		z-index: 500;
+		transition: $fast-anim;
+		box-shadow: 0 0 0 0 transparent;
+
+		box-shadow: 2px 2px 15px 0 rgba($dark-green, .1);
+
+		a {
+			padding: 15px;
+			display: block;
+
+			font-size: 0.875rem;
+			
+
+			text-decoration: none;
+			text-align: center;
+			color: $dark-green;
+
+			&:hover {
+				background-color: darken($bg, 2%);
+			}
+
+			&.active {
+				background-color: $dark-green;
+				color: $bg;
+			}
+    }
+    
+    &.calendar-filter {
+      height: 300px;
+    }
+	}
+}
+
+.filter .category-filter {
+  text-transform: uppercase;
+  color: $white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  label {
+    cursor: pointer;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 13px;
+
+    transition: .25s ease-in-out;
+
+    span {
+      font-size: 12px;
+      display: block;
+      transition: .25s ease-in-out;
+    }
+
+    &.active {
+      font-size: 10px;
+
+      span {
+        color: $light-green;
+        font-size: 16px;
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+
+    color: $white;
+  }
+}
+
+.filter__news {
+  justify-content: space-evenly;
+}
+.filter .category__news {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: .5s ease-in-out;
+
+  &:hover{
+    color: $light-green;
+    font-size: 15px;
+    transition: .5s ease-in-out;
+  }
+
+  &:focus{
+    color: $light-green;
+    font-size: 15px;
+    transition: .5s ease-in-out;
+  }
+}
+

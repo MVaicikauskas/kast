@@ -1,0 +1,36 @@
+.basic-form .image-container {
+  height: 100px;
+  border: 1px solid #d8dddd;
+  position: relative;
+}
+
+.basic-form .image-container .delete-item {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  padding: 2px 7px;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #d8dddd;
+  z-index: 5;
+}
+
+.basic-form .font-12 {
+  margin-top: 5px;
+  font-size: 12px;
+}
+#category
+{
+	height:100px;
+}
+
+.alternative-categories
+{
+  display:none ;
+}
+
+.alternative-categories .form-control
+{
+  height: 120px;
+}

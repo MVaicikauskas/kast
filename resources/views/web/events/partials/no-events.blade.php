@@ -1,0 +1,1 @@
+<p>Neradome renginių pagal Jūsų paiešką. <br><br>Pakoreguokite paiešką arba žiūrėkite visus renginius <a href="{{ route('events.page') }}" title="Visi renginiai">čia</a>.</p>

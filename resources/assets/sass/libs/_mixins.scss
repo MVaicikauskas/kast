@@ -1,0 +1,57 @@
+// Responsive breakpoints
+// define custom if needed
+$breakpoints: (
+	xsmall : 576px,
+	small  : 768px,
+	medium : 992px,
+  large  : 1200px,
+  xlarge : 1400px
+);
+
+// Media query mixins
+@mixin breakpoint($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+			@content;
+		}
+	}
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+@function legacy-direction($value) {
+	@if is-direction($value) == false {
+		@warn "Cannot convert value";
+	}
+
+	$conversion-map: (
+		to top          : bottom,
+	    to top right    : bottom left,
+	    to right top    : left bottom,
+	    to right        : left,
+	    to bottom right : top left,
+	    to right bottom : left top,
+	    to bottom       : top,
+	    to bottom left  : top right,
+	    to left bottom  : right top,
+	    to left         : right,
+	    to left top     : right bottom,
+	    to top left     : bottom right
+	);
+
+	@if map-has-key($conversion-map, $value) {
+		@return map-get($conversion-map, $value);
+	}
+
+	@return 90deg - $value;
+}
