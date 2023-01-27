@@ -1,0 +1,282 @@
+// // Landing Page activities
+.activities-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+
+  }
+
+  .column {
+    min-height: 200px;
+    // padding: 10px 20px;
+
+    width: 100%;
+
+    &--left {
+      width: 100%;
+    }
+
+    &--right {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: space-around;
+      justify-content: space-around;
+    }
+
+    @include breakpoint(large) {
+      &--left {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        align-items: space-around;
+        justify-content: space-around;
+      }
+
+      &--right {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .activities-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .activity {
+      width: 100%;
+      height: 502px;
+      padding: 0;
+      margin-bottom: 20px;
+      background-color: #fff;
+
+      box-shadow: 0 0 15px 1px rgba(0, 0, 0, .125);
+
+      border: 1px solid rgba(#c2d1d9, 0.35);
+      border-radius: 2px;
+      overflow: hidden;
+
+      @include breakpoint(small) {
+        width: calc(50% - 10px);
+      }
+    }
+  }
+
+  .activities-list .activity {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .activity__image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+
+    .activity__details {
+      position: relative;
+      z-index: 2;
+
+      width: 85%;
+      height: 85%;
+
+      background-color: rgba($darken-green, .9);
+      color: $white;
+
+      text-align: center;
+
+      padding: 120px 25px;
+
+      .details__title {
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        margin-bottom: 15px;
+      }
+
+      .details__description {
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      .button {
+        display: inline-block;
+
+        padding: 20px 15px;
+        border-radius: 2px;
+        background-color: $white;
+        
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $darken-green;
+
+        margin-top: 40px;
+        box-sizing: border-box;
+        border: 1px solid white;
+        transition: $text-anim;
+      }
+
+      .button:hover{
+        background-color: $darken-green;
+        color: white;
+        border: 1px solid white;
+        box-sizing: border-box;
+        box-shadow: 0 0 15px 2px rgba(197, 173, 173, 0.075);
+        transition: $text-anim;
+      }
+    }
+  }
+}
+
+.inner{
+
+  .activities-block{
+    .activities-list{
+    
+      .activity__inner{
+          width: 100%;
+          height: 320px;
+          // padding: 0 0 40px 0;
+          margin: 0px 5px 20px 5px;
+          background-color: #fff;
+    
+          box-shadow: 0 0 15px 1px rgba(0, 0, 0, .125);
+    
+          border: 1px solid rgba(#c2d1d9, 0.35);
+          border-radius: 2px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+    
+          @include breakpoint(small) {
+            height: 360px;
+            width: calc(50% - 10px);
+          }
+    
+          @include breakpoint(medium) {
+            height: 360px;
+            width: calc(50% - 10px);
+          }
+    
+          .activity__image {
+            width: 100%;
+            height: 300px;
+            cursor: pointer;
+            overflow: hidden;
+    
+            position: relative;
+    
+    
+            background-color: $light-grey;
+    
+            @include breakpoint(medium) {
+              height: 400px;
+              
+            }
+
+            img{
+              width: 100%;
+              object-position: center center;
+            }
+          }
+        
+          .activity__details{
+            background-color: white;
+            padding: 10px 20px 10px 20px;
+            color: $grey;
+            text-align: left;
+            width: 100%;
+
+            a:first-child{
+              color: $light-green;
+              font-size: 12px;
+              font-weight: bold;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              line-height: 1.5rem;
+            }
+
+        .details__title {
+          text-decoration: none;
+          color: inherit;
+
+          
+          font-weight: 700;
+          height: 50px;
+          font-size: 1rem;
+          line-height: 1.3rem;
+          display: flex;
+          align-items: center;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          // white-space: nowrap;
+
+          margin-bottom: 10px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          @include breakpoint(medium){
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+          }
+        }
+
+        .details {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+
+          .details__location {
+            
+           
+
+            font-size: 0.8rem;
+            line-height: 1.1rem;
+      
+
+            @include breakpoint(medium) {
+              
+              
+            }
+          }
+        }
+        }
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,30 @@
+@import "libs/vars";
+
+
+.basic-form {
+	.image-container {
+		height: 100px;
+    border: 1px solid $light-grey;
+    position: relative;
+
+    .delete-item {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+
+      padding: 2px 7px;
+      border-radius: 2px;
+      background-color: #fff;
+      border: 1px solid $light-grey;
+
+      z-index: 5;
+    }
+	}
+
+	.font-12 {
+		margin-top: 5px;
+		font-size: 12px;
+	}
+}
+

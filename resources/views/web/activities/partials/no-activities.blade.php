@@ -1,0 +1,1 @@
+<p>Neradome būrelių pagal Jūsų paiešką. <br><br>Pakoreguokite paiešką arba žiūrėkite visus būrelius <a href="{{ route('activities.index') }}" title="Visi būreliai">čia</a>.</p>

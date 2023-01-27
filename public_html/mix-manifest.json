@@ -1,0 +1,5 @@
+{
+    "/dist/js/custom.js": "/dist/js/custom.min.js",
+    "/dist/css/main.css": "/dist/css/main.min.css",
+    "/dist/css/admin.css": "/dist/css/admin.min.css"
+}

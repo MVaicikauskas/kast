@@ -1,0 +1,262 @@
+.about{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+
+    @include breakpoint(medium){
+    justify-content: space-between;
+    flex-direction: row;
+    }
+
+    >.section-content{
+        
+        width: 100%;
+        padding: 10px;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @include breakpoint(xsmall){
+            width: 80%;
+            padding: 20px;
+            }
+
+        @include breakpoint(medium){
+            width: 50%;
+            padding: 50px;
+            }
+
+        span{
+            font-size: 14px;
+            align-self: center;
+            color: $darken-green;
+            font-weight: bold;
+
+            @include breakpoint(small){
+                font-size: 16px;
+            align-self: flex-start;
+            }
+        }
+
+        .follow{
+            a{
+                font-size: 21px;
+                color: $darken-green;
+                padding-left: 10px;
+                transition: $text-anim;
+
+                i{
+                    .fab{
+                        font-size: 16px;
+                        color: $darken-green;
+                    }
+                }
+
+                &:hover{
+                    color: darken($darken-green, 15%);
+                    transition: $text-anim;
+                }
+            }
+        }
+
+        
+
+        h1{
+        color: $grey;
+		font-weight: 700;
+		line-height: 1.8rem;
+		font-size: 1.3rem;
+		align-self: center;
+        margin-bottom: 30px;
+        padding-top: 15px;
+       
+
+            @include breakpoint(small){
+            align-self: flex-start;
+            line-height: 1.5rem;
+            font-size: 1.8rem;
+            }
+            
+        }
+
+        p{
+            font-size: 0.875rem;
+            line-height: 1.2rem;
+            text-align: center;
+            margin-bottom: 25px;
+
+            @include breakpoint(small){
+                text-align: left;
+                
+                }
+        }
+
+        
+    }
+    >.block-shadow{
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    >.section-title{
+        // width: 40%;
+        
+        margin-top: 0px;
+
+        width: 100%;
+        
+        @include breakpoint(xsmall){
+            width: 80%;
+            }
+
+        @include breakpoint(medium){
+            width: 40%;
+            }
+
+
+        h4{ 
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        p{
+            font-size: 0.875rem;
+            line-height: 1.2rem;
+            text-align: center;
+            width: 290px;
+            
+            
+            
+            @include breakpoint(xsmall){
+                width: 320px;
+                }
+
+            a{
+             color: $darken-green;
+             transition: $text-anim;
+
+             &:hover{
+                color: darken($darken-green, 15%);
+                transition: $text-anim;
+             }
+            
+            }
+        }
+
+        form{
+            margin-top: 20px;
+
+            .form-group{
+
+                input, textarea{
+                    border: none;
+                    border-bottom: 1px solid $darken-green;
+                    outline: none;
+                    font-size: 13px;
+                }
+
+                textarea{
+                    height: 100px;
+                }
+
+                
+
+                .form-control{
+                    padding: 15px 5px;
+                    width: 290px;
+
+                    @include breakpoint(xsmall){
+                        width: 320px;
+                        }
+                    
+                    &::placeholder{
+                        font-size: 13px;
+                        line-height: 17px;
+                        color: $grey;
+                    }
+                
+                    &:focus{
+
+                        &::placeholder{  
+                            color: $darken-green;
+                        }
+                    }
+                    
+                }
+
+                
+            }
+
+            .form-check{
+                margin-top: 15px;
+                width: 290px;
+                padding-left: 5px;
+
+                @include breakpoint(xsmall){
+                    width: 320px;
+                    }
+                
+
+               .form-check-input{
+                   font-size: 16px;
+                   outline: none;
+                cursor: pointer;
+               }
+
+               .form-check-label{
+                   font-size: 13px;
+                   color: $grey;
+                   line-height: 16px;
+                   
+                   span{
+                       font-weight: bold;
+                   }
+
+               }
+            }
+
+            button{
+                margin-top: 20px;
+                padding: 15px;
+                width: 290px;
+                font-size: 13px;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                background-color: $darken-green;
+                border: 1px;
+                border-color: darken($darken-green, 5%);
+                color: white;
+                border-radius: 2px;
+                
+                outline: none;
+                cursor: pointer;
+                transition: $text-anim;
+
+                @include breakpoint(xsmall){
+                    width: 320px;
+                    }
+
+                &:hover{
+                    transition: $text-anim;
+                    background-color: darken($darken-green, 5%);
+                    }
+
+                
+            }
+            
+        }
+
+        
+    }
+
+   
+}
+

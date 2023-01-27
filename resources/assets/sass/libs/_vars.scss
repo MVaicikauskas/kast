@@ -1,0 +1,87 @@
+// Colors
+$dark-green: #0b3134;
+$yellow: #f4e76e;
+$red: #ec7063;
+$grey: #594f4f;
+$light-grey: #d8dddd;
+$grey-news: #9DAAAD;
+$bg: #fff;
+$white: #fff;
+
+$light-green: #9de0ad;
+$darken-green: #45ada8;
+
+$calendar-day: #969696;
+
+$gradient-color1: #30757a;
+
+// Sizes
+$header: 80px;
+$hero: 560px;
+
+// Animations
+$text-anim: ease-out 0.4s;
+$fast-anim: .45s cubic-bezier(.25, .60, .75, .55);
+$btn-anim: .3s cubic-bezier(.25, .60, .75, .55);
+$fast-btn-anim: .15s ease-in;
+
+%i-flex-align-y {
+	display: inline-flex;
+	align-items: center;
+}
+
+// Metropolis font
+@font-face {
+	font-family: 'Metropolis', sans-serif;
+	font-weight: 900;
+	src: url('./fonts/Metropolis-ExtraBold.otf') format('otf');
+}
+
+@font-face {
+	font-family: 'Metropolis', sans-serif;
+	font-weight: 700;
+	src: url('./fonts/Metropolis-Bold.otf') format('otf');
+}
+
+
+//Montserrat
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_cJD3gfD_vx3rCubqg.woff2) format('woff2');
+  }
+
+  @font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_dJE3gfD_vx3rCubqg.woff2) format('woff2');
+  }
+
+
+// Brandon Grotesque font
+
+// @font-face {
+// 	font-family: 'Brandon', sans-serif;
+// 	font-weight: 900;
+// 	font-style: normal;
+// 	src: 
+// 		url('./fonts/Brandon-blk.otf') format('otf'),
+// 		url('./fonts/Brandon_blk.ttf') format('ttf'),
+// 		url('./fonts/Brandon_blk.woff') format('woff'),
+// 		url('./fonts/Brandon_blk.woff2') format('woff2');
+// }
+
+// @font-face {
+// 	font-family: 'Brandon', sans-serif;
+// 	font-weight: 700;
+// 	src: url('./fonts/Brandon-bld.otf') format('otf');
+// }
+
+// @font-face {
+// 	font-family: 'Brandon', sans-serif;
+// 	font-weight: 500;
+// 	src: url('./fonts/Brandon-reg.otf') format('otf');
+// }

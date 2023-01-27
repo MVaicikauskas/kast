@@ -1,0 +1,160 @@
+#clndr,
+.clndr-container,
+.clndr
+ {
+	height: 100%;
+	z-index: 100;
+}
+
+.clndr {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.clndr .clndr-controls {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	> .clndr-btn {
+		position: absolute;
+		top: 50%;
+		transform: translatY(-50%);
+		cursor: pointer;
+		z-index: 11;
+		width: 10px;
+		height: 10px;
+		background-size: contain;
+		background-position: center center;
+
+
+		&.clndr-previous-button {
+			left: 12px;
+			background-image: url('../images/arrows/arrow-point-to-left.svg');
+		}
+
+		&.clndr-next-button {
+			right: 12px;
+			background-image: url('../images/arrows/arrow-point-to-right.svg');
+
+		}
+	}
+}
+
+.clndr .clndr-controls .clndr-month {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Metropolis';
+	font-size: 4rem;
+	font-weight: 900;
+	color: rgba($calendar-day, .175);
+	transition: $text-anim;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@include breakpoint(medium) {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	@include breakpoint(large) {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	
+}
+
+.clndr:hover .clndr-month {
+	color: rgba($calendar-day, .075);
+}
+
+.clndr .clndr-controls .clndr-year {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	font-family: 'Metropolis';
+	font-size: 2rem;
+	font-weight: 700;
+	color: rgba($calendar-day, .35);
+}
+
+.clndr-grid {
+	width: 100%;
+	position: absolute;
+	z-index: 10;
+
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@include breakpoint(medium) {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	@include breakpoint(large) {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+.clndr-grid .header-days {
+	width: 100%;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+
+	.header-day {
+		font-size: 1rem;
+		color: $dark-green;
+		font-weight: 900;
+		font-family: 'Metropolis', sans-serif;
+		width: 10.285%;
+		margin: 0 2%;
+		text-align: center;
+	}
+}
+
+.clndr-grid .days {
+	width: 100%;
+	height: calc(100% - 25px);
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	
+
+	.day {
+		font-size: 0.875rem;
+		width: 10.285%;
+		text-align: center;
+		font-family: 'Metropolis', sans-serif;
+		font-weight: 700;
+		padding: 10px 0;
+		color: $calendar-day;
+		margin: 2px 2%;
+	}
+}
+
+.clndr-grid .days .last-month,
+.clndr-grid .days .next-month {
+	color: rgba($grey, .2);
+}
+
+.clndr-grid .days .event {
+	border: 1px solid $yellow;
+	cursor: pointer;
+	transition: $text-anim;
+
+	&:hover {
+		background-color: $yellow;
+		color: $bg;
+	}
+}
+
+.clndr-grid .days .today {
+	background-color: $red;
+	color: $bg;
+}

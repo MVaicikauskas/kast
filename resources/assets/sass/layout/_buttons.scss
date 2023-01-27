@@ -1,0 +1,96 @@
+.stylish-button {
+	width: 55px;
+	height: 55px;
+	background-color: $bg;
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+	margin: 0 5px;
+
+	transition: $btn-anim;
+
+	position: relative;
+
+	border-radius: 3px;
+
+	&::before {
+		content: '';
+		width: 16px;
+		height: 26px;
+
+		position: absolute;
+		left: 50%;
+		top: 50%;
+
+		transform: translate(-50%, -50%);
+
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		transition: $btn-anim;
+	}
+
+	&.prev,
+	&.next {
+		transition: $fast-btn-anim;
+	}
+
+	&.prev {
+		&::before {
+			background-image: url('../images/arrows/left@3x.png');
+		}
+		
+	}
+
+	&.next {
+		&::before {
+			background-image: url('../images/arrows/right@3x.png');
+		}	
+	}
+}
+
+.event-button-container {
+	display: inline-flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	margin-right: 35px;
+
+	.btn-add-event {
+		padding: 14px 25px;
+		font-size: 0.875rem;
+		font-weight: 700;
+    	text-transform: uppercase;
+    	color: $grey;
+		text-decoration: none;
+    	letter-spacing: 0,2px;
+    	border-radius: 2px;
+    	border: 1px solid $light-green;
+
+   		cursor: pointer;
+
+		transition: $text-anim;
+
+		&:hover {
+		background-color: $light-green;
+		  color: $white;
+		  transition: $text-anim;
+		}
+
+		&.active {
+     	background-color: $light-green;
+      	color: $white;
+		}
+
+
+	}
+}
+
+.mobile-nav .event-button-container {
+	width: 100%;
+	margin: 40px 0;
+
+	.btn-add-event {
+		font-size: 1rem;
+	}
+}

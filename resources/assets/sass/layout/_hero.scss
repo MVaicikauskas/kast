@@ -1,0 +1,115 @@
+.hero-block {
+	display: none;
+	width: 100%;
+	height: $hero - 200px;
+
+	@include breakpoint(small) {
+		height: $hero - 100px;
+		display: block;
+	}
+
+	@include breakpoint(medium) {
+		height: $hero;
+	}
+}
+
+.inner {
+  .hero-block {
+    height: 250px;
+  }
+}
+
+
+// Custom header
+.custom-header {
+	width: 100%;
+	height: 100%;
+	background-color: $bg;
+
+	@include linear-gradient(to left, rgba(#30757a, .15), rgba(#3d3333, .15));
+
+	border: 1px solid rgba($dark-green, .05);
+	box-shadow: 0 5px 20px 1.25px rgba($dark-green, .1); 
+
+	position: relative;
+}
+
+.custom-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+  .play-button {
+    display: none;
+
+    width: 72px;
+    position: relative;
+    z-index: 55;
+    cursor: pointer;
+
+    @include breakpoint(medium) {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+.custom-header > .custom-header-image {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+
+	left: 0;
+	top: 0;
+
+	> img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+
+		// opacity: .8;
+	}
+}
+
+.custom-header > .custom-header-video {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+
+	left: 0;
+	top: 0;
+
+	overflow: hidden;
+
+	> video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+
+		opacity: 1;
+
+		display: none;
+
+		@include breakpoint(small) {
+			display: block;
+		}
+	}
+
+	> img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+
+		opacity: .8;
+	}
+}

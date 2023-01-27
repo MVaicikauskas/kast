@@ -1,0 +1,204 @@
+section,
+.banners {
+	width: 100%;
+	margin-top: 20px;
+	padding: 0 60px;
+
+	@include breakpoint(medium) {
+			// margin-top: 40px;
+	}
+}
+
+.section_gallery{
+	padding: 0;
+	.section-title{
+		h4{
+			text-align: center;
+
+		}
+	}
+}
+
+
+	.section-title{
+		.partners-title{
+				text-align: center;
+			
+		}
+	}
+
+
+
+.events-section, .section__padding{
+	max-width: 1440px;
+	margin: 0 auto;
+	margin-top: 40px;
+
+	@include breakpoint(small){
+		margin-top: 70px;
+	}
+}
+
+section.section__padding {
+  padding: 0 10px;
+  padding-bottom: 30px;
+
+  @include breakpoint(small) {
+	padding: 0 20px;
+	padding-bottom: 30px;
+  }
+
+  @include breakpoint(medium) {
+	padding: 0 30px;
+	padding-bottom: 30px;
+  }
+
+  @include breakpoint(large) {
+	padding: 0 80px;
+	padding-bottom: 30px;
+  }
+
+  @include breakpoint(xlarge) {
+	padding: 0 90px;
+	padding-bottom: 45px;
+  }
+}
+
+
+section .section-title {
+	width: 100%;
+
+	padding-right: 0;
+	margin: 60px 0 10px;
+
+	h4 {
+		color: $grey;
+		font-weight: 700;
+		line-height: 1.2rem;
+		font-size: 1.3rem;
+		text-align: center;
+		margin-bottom: 20px;
+
+		@include breakpoint(small){
+		text-align: left;
+		line-height: 1.5rem;
+		font-size: 1.8rem;
+		}
+	}
+	
+	// Section names
+	> h1, h4, h6 {
+		
+		padding: 0;
+		position: relative;
+
+		@include breakpoint(small) {
+		margin-left: 5px;
+		
+		}
+	}
+
+
+	
+	// Event title
+	h1 {
+		color: $grey;
+		font-weight: 700;
+		line-height: 1.2rem;
+		font-size: 1.3rem;
+		text-align: center;
+		margin-bottom: 20px;
+
+		@include breakpoint(small){
+		text-align: left;
+		line-height: 1.5rem;
+		font-size: 1.8rem;
+		}
+	}
+  
+  h6.sub-title {
+    font-size: 14px;
+    color: $grey;
+    margin-top: 2px;
+    margin-bottom: 15px;
+  }
+}
+
+.landing-gallery{
+	padding: 0px;
+	padding-top: 20px;
+
+	.section-title{
+		h4, h6{
+			margin: 0 10px;
+			text-align: center;
+		}
+
+		h6{
+			padding-top: 5px;
+		}
+	}
+}
+
+
+.form-title{
+	padding-left: 0px;
+
+	h1{
+		margin-left: 0px;
+		padding: 0px;
+	
+	
+	@include breakpoint(small) {
+		margin-left: 0px;
+		padding: 0px;
+	}
+	}
+	
+}
+
+.section-content {
+	padding-right: 0;
+	z-index: 1;
+
+	@include breakpoint(medium) {
+		// padding-right: 70px;
+	}
+}
+
+.gallery {
+	width: 100%;
+}
+
+.block-shadow {
+	box-shadow: 0 3px 25px 1.25px rgba($dark-green, .075);
+	padding-top: 5px;
+}
+
+
+.no-m-t {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 50px !important;
+	padding: 0;
+	padding-bottom: 40px;
+
+	
+
+
+	@include breakpoint(small) {
+		width: 700px;
+	}
+
+	@include breakpoint(medium) {
+		width: 900px;
+	}
+
+	@include breakpoint(large) {
+		width: 1000px;
+	}
+
+	@include breakpoint(xlarge) {
+		width: 1000px;
+	}
+}
