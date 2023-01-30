@@ -72,11 +72,6 @@ class PostsController extends AdminController
 
         $post->author = $request->author;
         $post->title = $request->title;
-//        if( isset($request->slug) && !empty($request->slug) ) {
-//            $post->slug = Str::slug($request->slug);
-//        }else {
-//            $post->slug = Str::slug($request->title);
-//        }
         $post->slug = $request->slug;
         $post->featured = (bool) $request->featured;
         $post->trending = (bool) $request->trending;
