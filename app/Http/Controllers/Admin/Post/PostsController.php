@@ -57,25 +57,27 @@ class PostsController extends AdminController
      */
     public function store(Request $request)
     {
-        // need to update!!!
+        $request->merge(['slug' => Str::slug($request->slug)]);
+
         $this->validate($request, [
             'title' => 'required|min:3|max:191',
             'excerpt' => 'required|min:3|max:191',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'description' => 'required',
             'category_id' => 'required',
-            'slug' => 'exists:posts'
+            'slug' => 'required|unique:posts'
         ]);
 
         $post = new Post;
 
         $post->author = $request->author;
         $post->title = $request->title;
-        if( isset($request->slug) && !empty($request->slug) ) {
-            $post->slug = Str::slug($request->slug);
-        }else {
-            $post->slug = Str::slug($request->title);
-        }
+//        if( isset($request->slug) && !empty($request->slug) ) {
+//            $post->slug = Str::slug($request->slug);
+//        }else {
+//            $post->slug = Str::slug($request->title);
+//        }
+        $post->slug = $request->slug;
         $post->featured = (bool) $request->featured;
         $post->trending = (bool) $request->trending;
         $post->excerpt = $request->excerpt;
